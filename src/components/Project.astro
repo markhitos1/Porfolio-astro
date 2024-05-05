@@ -1,0 +1,50 @@
+---
+import HTML from "./icons/HTML.astro"
+
+const TAGS ={
+    html :{
+        name:'HTML',
+        class:'bg-black text-white',
+        icon:HTML,
+    },
+    html2 :{
+        name:'HTML',
+        class:'bg-black text-white',
+        icon:HTML,
+    }
+}
+
+const PROJECTS = [
+ {
+    title:'proyecto 1',
+    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit tempore ipsam eos veritatis reiciendis beatae quis, magnam delectus illo corrupti atque sit optio odit aperiam incidunt vitae nulla. Iusto.',
+    link:'#',
+    github:'#',
+    image: '/public/project/project-1.png',
+    tags: [TAGS.html , TAGS.html2]
+ }
+]
+
+---
+{
+
+PROJECTS.map(({title,description,tags,image})=>(
+    <article>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
+        <p class="text-lg mb-4 text-pretty" > {description} </p>
+        <ul class="flex gap-x-2 flex-row " >
+            { tags.map((tag)=>(
+                   <span class={` flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-4 mb-2`}>
+                     <tag.icon class="size-6"/>
+                    <li>{tag.name}</li>
+                   </span>
+                ))}
+        </ul>
+      <img 
+      class="rounded shadow-2xl shadow-white/10"
+      src={image} alt="una captura"/>
+    </article>
+))
+}
+
+

@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import Github from '../components/icons/Github.astro';
+import Gmail from '../components/icons/Gmail.astro';
+import Social from '../components/icons/Social.astro';
+import Experience from '../components/Expirence.astro';
+import SeccionsContainers from '../components/SeccionsContainers.astro';
+import Briefcase from '../components/icons/briefcase.astro';
+import CodeIcon from '../components/icons/codeIcon.astro';
+import Project from '../components/Project.astro';
+
+
+---
+
+<Layout title="Porfolio Web">
+	<main class="px-4" >
+		<SeccionsContainers  class="py-44 pb-24" >
+			<img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" class="rounded-full w-12 h-12 mb-4" alt="perfil"/ >
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6
+			lg:pb-10" >
+				Hey, I'm Marcos C.
+					<a href="https://www.linkedin.com/in/marcos-cabrera-47727b260/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center  items-center"
+					>
+						<Badge>Disponible para trabajar </Badge>
+					</a>
+			</h1>
+			<h2 class=" text-xl lg:text-2xl opacity-80 text-wrap mx-w-[700px]" >
+				<span class="text-yellow-200/90" >+3 años de experiencia como Desarrollador Web FrontEnd.</span> 
+				<span class="text-blue-100/90" >  Soy de Rosario , Argentina </span> 
+				<span> 🇦🇷 </span>
+			</h2>
+			<nav class="flex gap-2 mt-8  flex-wrap " >
+				<Social href="https://www.linkedin.com/in/marcos-cabrera-47727b260/" >	
+					<Linkedin class=" size-4 md:size-6" />
+					Linkedin
+				</Social>
+				<Social href="https://github.com/markhitos1" >	
+					<Github class=" size-4 md:size-6" />
+					Github
+				</Social>
+				<Social href="mailto:mc2622016@gmail.com" >	
+					<Gmail class=" size-4 md:size-6" />
+					mc2622016@gmail.com
+				</Social>
+			</nav>
+		</SeccionsContiners>
+
+		<SeccionsContainers id="experiencia" >
+			<h2 class="text-2xl font-semibold mb-7 flex gap-x-3 items-center " > 
+				<Briefcase class="size-8" />
+				Experiencia laboral 
+			</h2>
+			<Experience/>
+		</SeccionsContainers>
+		<SeccionsContainers id="experiencia" >
+			<h2 class="text-2xl font-semibold mb-7 flex gap-x-3 items-center " > 
+				<CodeIcon class="size-8" />
+				Proyectos 
+			</h2>
+			<Project/>
+		</SeccionsContainers> 
+	</main>
+</Layout>
+
+
+
+
