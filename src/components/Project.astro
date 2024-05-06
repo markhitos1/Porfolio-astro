@@ -20,7 +20,6 @@ const PROJECTS = [
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit tempore ipsam eos veritatis reiciendis beatae quis, magnam delectus illo corrupti atque sit optio odit aperiam incidunt vitae nulla. Iusto.',
     link:'#',
     github:'#',
-    image: '/home/marcos/Escritorio/ASTRO-PORT/pofolio-mark/public/project/project-1.png',
     tags: [TAGS.html , TAGS.html2]
  }
 ]
@@ -28,7 +27,7 @@ const PROJECTS = [
 ---
 {
 
-PROJECTS.map(({title,description,tags,image})=>(
+PROJECTS.map(({title,description,tags})=>(
     <article>
         <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
         <p class="text-lg mb-4 text-pretty" > {description} </p>
@@ -42,7 +41,7 @@ PROJECTS.map(({title,description,tags,image})=>(
         </ul>
       <img 
       class="rounded shadow-2xl shadow-white/10"
-      src={image} alt="una captura"/>
+      src='/pofolio-mark/public/project/project-1.png' alt="una captura"/>
     </article>
 ))
 }
