@@ -1,41 +1,46 @@
 ---
 import HTML from "./icons/HTML.astro"
+import JS from "./icons/Javascript.astro"
 
 const TAGS ={
     html :{
         name:'HTML',
         class:'bg-black text-white',
         icon:HTML,
+        pixel:'size-7'
     },
-    html2 :{
-        name:'HTML',
+    JS :{
+        name:'JAVASCRIPT',
         class:'bg-black text-white',
-        icon:HTML,
+        icon:JS,
+        pixel:'size-8'
     }
 }
 
 const PROJECTS = [
  {
     title:'proyecto 1',
-    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit tempore ipsam eos veritatis reiciendis beatae quis, magnam delectus illo corrupti atque sit optio odit aperiam incidunt vitae nulla. Iusto.',
-    link:'#',
-    github:'#',
-    tags: [TAGS.html , TAGS.html2]
+    description:`Nuestra plataforma te permite mantenerte en contacto con tus amigos mediante un chat en tiempo real y ver sus publicaciones más recientes. Ya sea para compartir momentos especiales, fotos, o simplemente para mantenerse en contacto.`,
+    link:'Visíta la pagina en: ',
+    github:'El código de nuestra plataforma está en: ',
+    tags: [TAGS.html , TAGS.JS]
  }
 ]
 
 ---
 {
 
-PROJECTS.map(({title,description,tags})=>(
+PROJECTS.map(({title,description,link,github,tags})=>(
     <article>
         <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
-        <p class="text-lg mb-4 text-pretty" > {description} </p>
+        <p class="text-lg mb-2 text-pretty" > {description} </p>
+        <p class="text-lg mb-2 text-pretty text-yellow-100" > {link} <a href="https://chat-web-rho-five.vercel.app/#">CHAT WEB</a> </p>
+        <p class="text-lg mb-4 text-pretty text-yellow-100" > {github} <a href="https://github.com/markhitos1/CHAT-WEB.git">GITHUB</a> </p>
         <ul class="flex gap-x-2 flex-row " >
             { tags.map((tag)=>(
                    <span class={` flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-4 mb-2`}>
-                     <tag.icon class="size-6"/>
-                    <li>{tag.name}</li>
+                     <tag.icon class={tag.pixel}/>
+                    <li class="mt-2" >{tag.name}</li>
                    </span>
                 ))}
         </ul>
