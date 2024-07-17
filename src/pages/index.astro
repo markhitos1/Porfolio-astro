@@ -10,7 +10,8 @@ import SeccionsContainers from '../components/SeccionsContainers.astro';
 import Briefcase from '../components/icons/briefcase.astro';
 import CodeIcon from '../components/icons/codeIcon.astro';
 import Project from '../components/Project.astro';
-
+import SobreMi from '../components/SobreMi.astro';
+import Certificado from '../components/icons/Certificado.astro'
 
 ---
 
@@ -51,19 +52,32 @@ import Project from '../components/Project.astro';
 		</SeccionsContiners>
 
 		<SeccionsContainers id="experiencia" >
-			<h2 class="text-2xl font-semibold mb-7 flex gap-x-3 items-center " > 
-				<Briefcase class="size-8" />
+			<h2 class="text-3xl font-semibold mb-7 flex gap-x-3 items-center " > 
+				<Briefcase class="size-9" />
 				Experiencia laboral 
 			</h2>
 			<Experience/>
 		</SeccionsContainers>
-		<SeccionsContainers id="experiencia" >
-			<h2 class="text-2xl font-semibold mb-7 flex gap-x-3 items-center " > 
-				<CodeIcon class="size-8" />
+		<SeccionsContainers id="proyectos" >
+			<h2 class="text-3xl font-semibold mb-7 flex gap-x-3 items-center " > 
+				<CodeIcon class="size-9" />
 				Proyectos 
 			</h2>
 			<Project/>
 		</SeccionsContainers> 
+		<SeccionsContainers id="sobre-mi" >
+			<h2 class="text-3xl font-semibold mt-20  mb-7 flex gap-x-3 items-center " >
+				Certificado
+				<Certificado class="size-9" />
+			</h2>
+			<p class="text-lg mb-2 text-pretty text-yellow-100" >
+				Este es un certificado que consegui por medio de unas clases online,
+				mediantes unas pruebas tecnicas, ejercicios y preguntas, para aprobar
+				y contar con una capacitacion.
+			</p>
+			<p class="text-lg mb-2 text-pretty text-yellow-100" >podes encontrarlo en : <a href="https://todocodeacademy.com/cursos/" class="text-blue-200" >TODO CODE.</a>  </p>
+			<SobreMi/>
+		</SeccionsContainers>
 	</main>
 </Layout>
 
