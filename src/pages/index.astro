@@ -12,6 +12,9 @@ import CodeIcon from '../components/icons/codeIcon.astro';
 import Project from '../components/Project.astro';
 import SobreMi from '../components/SobreMi.astro';
 import Certificado from '../components/icons/Certificado.astro'
+import CertificadoGitHub from '../components/icons/Certificado.astro'
+import SobreMiGit from '../components/SobreMiGit.astro';
+
 
 ---
 
@@ -67,7 +70,7 @@ import Certificado from '../components/icons/Certificado.astro'
 		</SeccionsContainers> 
 		<SeccionsContainers id="sobre-mi" >
 			<h2 class="text-3xl font-semibold mt-20  mb-7 flex gap-x-3 items-center " >
-				Certificado
+				Certificado HTML y CSS
 				<Certificado class="size-9" />
 			</h2>
 			<p class="text-lg mb-2 text-pretty text-white" >
@@ -77,6 +80,19 @@ import Certificado from '../components/icons/Certificado.astro'
 			</p>
 			<p class="text-lg mb-2 text-pretty text-yellow-100" >podes encontrarlo en : <a href="https://todocodeacademy.com/cursos/" class="text-blue-200" >TODO CODE.</a>  </p>
 			<SobreMi/>
+		</SeccionsContainers>
+		<SeccionsContainers id="sobre-mi" >
+			<h2 class="text-3xl font-semibold mt-20  mb-7 flex gap-x-3 items-center " >
+				Certificado Git y GitHub
+				<Certificado class="size-9" />
+			</h2>
+			<p class="text-lg mb-2 text-pretty text-white" >
+				Este es un certificado que consegui por medio de unas clases online,
+				mediantes unas pruebas tecnicas, ejercicios y preguntas, para aprobar
+				y contar con una capacitacion.
+			</p>
+			<p class="text-lg mb-2 text-pretty text-yellow-100" >podes encontrarlo en : <a href="https://todocodeacademy.com/cursos/" class="text-blue-200" >TODO CODE.</a>  </p>
+			<SobreMiGit/>
 		</SeccionsContainers>
 	</main>
 </Layout>

@@ -2,6 +2,7 @@
 import HTML from "./icons/HTML.astro"
 import JS from "./icons/Javascript.astro"
 import CSS from './icons/CSS.astro'
+import REACT from './icons/REACT.astro'
 
 const TAGS ={
     html :{
@@ -21,12 +22,64 @@ const TAGS ={
         class:'bg-black text-white',
         icon:CSS,
         pixel:'size-9'
+    },
+    REACT :{
+        name:'REACT',
+        class:'bg-black text-blue-200',
+        icon:REACT,
+        pixel:'size-9'
     }
 }
+const TIENDAWEB = [
+ {
+    title:'1. TIENDA WEB',
+    description:`Desarrollada con JavaScript, HTML y CSS, esta tienda online ofrece una experiencia moderna, intuitiva y funcional para la compra de ropa urbana. El diseño responsive asegura que los usuarios puedan navegar cómodamente desde cualquier dispositivo, ya sea un smartphone, tablet o computadora.`,
+    link:'Visíta la pagina en: ',
+    github:'El código se encuentra en: ',
+    tags: [TAGS.html , TAGS.JS , TAGS.CSS]
+ }
+]
+
+const MARIOBRO = [
+ {
+    title:'2. MARIO BRO',
+    description:`Nuestra plataforma te permite mantenerte en contacto con tus amigos mediante un chat en tiempo real y ver sus publicaciones más recientes. Ya sea para compartir momentos especiales, fotos, o simplemente para mantenerse en contacto.`,
+    link:'Visíta la pagina en: ',
+    github:'El código se encuentra en: ',
+    tags: [TAGS.html , TAGS.JS , TAGS.CSS]
+ }
+]
+const PACMAN = [
+ {
+    title:'3. PACMAN',
+    description:`Este proyecto es una versión completamente funcional del clásico Pac-Man, desarrollada desde cero utilizando exclusivamente JavaScript, HTML y CSS. Este juego demuestra habilidades avanzadas en programación, lógica de juego y diseño interactivo sin depender de frameworks externos.`,
+    link:'Visíta la pagina en: ',
+    github:'El código se encuentra en: ',
+    tags: [TAGS.html , TAGS.JS , TAGS.CSS]
+ }
+]
+const CHATREACT = [
+ {
+    title:'4. CHAT REACT',
+    description:`Chat React es una aplicación de mensajería en tiempo real desarrollada con React para la interfaz de usuario y Firebase para la gestión de datos y autenticación. Este proyecto destaca por su diseño moderno, su rendimiento optimizado y la integración de servicios en la nube para proporcionar una experiencia fluida y segura.`,
+    link:'Visíta la pagina en: ',
+    github:'El código se encuentra en: ',
+    tags: [TAGS.html , TAGS.REACT , TAGS.CSS]
+ }
+]
+const WEBDEV = [
+ {
+    title:'5. INFO CODE',
+    description:`InfoCode es una página web informativa diseñada para ofrecer contenido relacionado con el mundo de la programación. Desarrollada con HTML, CSS y JavaScript, esta plataforma proporciona recursos educativos, tutoriales y artículos sobre diversos lenguajes de programación y tecnologías, todo en un diseño moderno y organizado.`,
+    link:'Visíta la pagina en: ',
+    github:'El código se encuentra en: ',
+    tags: [TAGS.html , TAGS.REACT , TAGS.CSS]
+ }
+]
 
 const CHATWEB = [
  {
-    title:'1. CHAT WEB',
+    title:'6. CHAT WEB',
     description:`Nuestra plataforma te permite mantenerte en contacto con tus amigos mediante un chat en tiempo real y ver sus publicaciones más recientes. Ya sea para compartir momentos especiales, fotos, o simplemente para mantenerse en contacto.`,
     link:'Visíta la pagina en: ',
     github:'El código se encuentra en: ',
@@ -35,7 +88,7 @@ const CHATWEB = [
 ]
 const HAMBURGERS = [
  {
-    title:'2. HAMBURG WEB',
+    title:'7. HAMBURG WEB',
     description:`Nuestra plataforma te permite mantenerte en contacto con tus amigos mediante un chat en tiempo real y ver sus publicaciones más recientes. Ya sea para compartir momentos especiales, fotos, o simplemente para mantenerse en contacto.`,
     link:'Visíta la pagina en: ',
     github:'El código se encuentra en: ',
@@ -44,7 +97,7 @@ const HAMBURGERS = [
 ]
 const PELOTA = [
  {
-    title:'3. PELOTA ROJA',
+    title:'8. PELOTA ROJA',
     description:`Nuestra plataforma te permite mantenerte en contacto con tus amigos mediante un chat en tiempo real y ver sus publicaciones más recientes. Ya sea para compartir momentos especiales, fotos, o simplemente para mantenerse en contacto.`,
     link:'Visíta la pagina en: ',
     github:'El código se encuentra en: ',
@@ -54,7 +107,7 @@ const PELOTA = [
 
 const SNAKE = [
  {
-    title:'4. SNAKE',
+    title:'9. SNAKE',
     description:`Nuestra plataforma te permite mantenerte en contacto con tus amigos mediante un chat en tiempo real y ver sus publicaciones más recientes. Ya sea para compartir momentos especiales, fotos, o simplemente para mantenerse en contacto.`,
     link:'Visíta la pagina en: ',
     github:'El código se encuentra en: ',
@@ -63,6 +116,130 @@ const SNAKE = [
 ]
 
 ---
+
+{
+
+    TIENDAWEB.map(({title,description,link,github,tags})=>(
+        <article class="mb-10">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
+            <p class="text-lg mb-2 text-pretty" > {description} </p>
+            <p class="text-lg mb-2 text-pretty text-yellow-100" > {link} <a class="text-blue-200" href="https://tienda-web-six.vercel.app/">TIENDA WEB.</a> </p>
+            <p class="text-lg mb-4 text-pretty text-yellow-100" > {github} <a class="text-blue-200" href="https://github.com/markhitos1/Tienda-web">GITHUB.</a> </p>
+            <ul class="flex gap-x-2 flex-row " >
+                { tags.map((tag)=>(
+                       <span class={` flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-4 mb-2`}>
+                         <tag.icon class={tag.pixel}/>
+                        <li class="mt-2" >{tag.name}</li>
+                       </span>
+                    ))}
+            </ul>
+          <img 
+          class="rounded shadow-2xl shadow-white/10"
+          src="/img/tiendaWeb.png" alt="una captura"/>
+           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        </article>
+    ))
+    }
+
+
+{
+
+    MARIOBRO.map(({title,description,link,github,tags})=>(
+        <article class="mb-10">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
+            <p class="text-lg mb-2 text-pretty" > {description} </p>
+            <p class="text-lg mb-2 text-pretty text-yellow-100" > {link} <a class="text-blue-200" href="https://chat-web-rho-five.vercel.app/#">MARIO BROS.</a> </p>
+            <p class="text-lg mb-4 text-pretty text-yellow-100" > {github} <a class="text-blue-200" href="https://github.com/markhitos1/CHAT-WEB.git">GITHUB.</a> </p>
+            <ul class="flex gap-x-2 flex-row " >
+                { tags.map((tag)=>(
+                       <span class={` flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-4 mb-2`}>
+                         <tag.icon class={tag.pixel}/>
+                        <li class="mt-2" >{tag.name}</li>
+                       </span>
+                    ))}
+            </ul>
+          <img 
+          class="rounded shadow-2xl shadow-white/10"
+          src="/img/mariobro.png" alt="una captura"/>
+           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        </article>
+    ))
+}
+
+{
+
+    PACMAN.map(({title,description,link,github,tags})=>(
+        <article class="mb-10">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
+            <p class="text-lg mb-2 text-pretty" > {description} </p>
+            <p class="text-lg mb-2 text-pretty text-yellow-100" > {link} <a class="text-blue-200" href="https://chat-web-rho-five.vercel.app/#">PAC MAN.</a> </p>
+            <p class="text-lg mb-4 text-pretty text-yellow-100" > {github} <a class="text-blue-200" href="https://github.com/markhitos1/CHAT-WEB.git">GITHUB.</a> </p>
+            <ul class="flex gap-x-2 flex-row " >
+                { tags.map((tag)=>(
+                       <span class={` flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-4 mb-2`}>
+                         <tag.icon class={tag.pixel}/>
+                        <li class="mt-2" >{tag.name}</li>
+                       </span>
+                    ))}
+            </ul>
+          <img 
+          class="rounded shadow-2xl shadow-white/10"
+          src="/img/PACMAN.png" alt="una captura"/>
+           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        </article>
+    ))
+    }
+
+{
+
+    WEBDEV.map(({title,description,link,github,tags})=>(
+        <article class="mb-10">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
+            <p class="text-lg mb-2 text-pretty" > {description} </p>
+            <p class="text-lg mb-2 text-pretty text-yellow-100" > {link} <a class="text-blue-200" href="https://chat-web-rho-five.vercel.app/#">WEB DEV.</a> </p>
+            <p class="text-lg mb-4 text-pretty text-yellow-100" > {github} <a class="text-blue-200" href="https://github.com/markhitos1/CHAT-WEB.git">GITHUB.</a> </p>
+            <ul class="flex gap-x-2 flex-row " >
+                { tags.map((tag)=>(
+                       <span class={` flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-4 mb-2`}>
+                         <tag.icon class={tag.pixel}/>
+                        <li class="mt-2" >{tag.name}</li>
+                       </span>
+                    ))}
+            </ul>
+          <img 
+          class="rounded shadow-2xl shadow-white/10"
+          src="/img/webdev.png" alt="una captura"/>
+           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        </article>
+    ))
+    }
+
+{
+
+    CHATREACT.map(({title,description,link,github,tags})=>(
+        <article class="mb-10">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
+            <p class="text-lg mb-2 text-pretty" > {description} </p>
+            <p class="text-lg mb-2 text-pretty text-yellow-100" > {link} <a class="text-blue-200" href="https://chat-web-rho-five.vercel.app/#">CHAT REACT.</a> </p>
+            <p class="text-lg mb-4 text-pretty text-yellow-100" > {github} <a class="text-blue-200" href="https://github.com/markhitos1/CHAT-WEB.git">GITHUB.</a> </p>
+            <ul class="flex gap-x-2 flex-row " >
+                { tags.map((tag)=>(
+                       <span class={` flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-4 mb-2`}>
+                         <tag.icon class={tag.pixel}/>
+                        <li class="mt-2" >{tag.name}</li>
+                       </span>
+                    ))}
+            </ul>
+          <img 
+          class="rounded shadow-2xl shadow-white/10"
+          src="/img/webreact.png" alt="una captura"/>
+           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        </article>
+    ))
+    }
+    
+
+
 {
 
 CHATWEB.map(({title,description,link,github,tags})=>(
@@ -141,8 +318,8 @@ HAMBURGERS.map(({title,description,link,github,tags})=>(
             <article  class="mb-10" >
                 <h3 class="text-2xl font-semibold text-yellow-200 mb-2 opacity-90" > {title} </h3>
                 <p class="text-lg mb-2 text-pretty" > {description} </p>
-                <p class="text-lg mb-2 text-pretty text-yellow-100" > {link} <a class="text-blue-200" href="https://pelota-roja.vercel.app/">SNAKE.</a> </p>
-                <p class="text-lg mb-4 text-pretty text-yellow-100" > {github} <a class="text-blue-200" href="https://github.com/markhitos1/PELOTA-ROJA/tree/master">GITHUB.</a> </p>
+                <p class="text-lg mb-2 text-pretty text-yellow-100" > {link} <a class="text-blue-200" href="https://snake-pi-one.vercel.app/">SNAKE.</a> </p>
+                <p class="text-lg mb-4 text-pretty text-yellow-100" > {github} <a class="text-blue-200" href="https://github.com/markhitos1/Snake">GITHUB.</a> </p>
                 <ul class="flex gap-x-2 flex-row " >
                     { tags.map((tag)=>(
                            <span class={` flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-4 mb-2`}>

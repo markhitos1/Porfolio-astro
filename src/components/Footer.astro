@@ -1,4 +1,7 @@
-
+---
+import AstroIcon from "./icons/astroIcon.astro" 
+import Tailwind from "./icons/tailwind.astro"
+---
 
 <footer 
 class="bg-dark rounded-lg shadow dark:bg-gray-900 m-4 py-5 w-[700px] mx-auto ">
@@ -25,6 +28,8 @@ class="bg-dark rounded-lg shadow dark:bg-gray-900 m-4 py-5 w-[700px] mx-auto ">
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Porfolio™</a>. All Rights Reserved.</span>
+        <span class="block text-sm text-gray-400 sm:text-center " >Created with Astro and Tailwind </span>
+        <span class="block text-center">  <AstroIcon class='block inline-block text-purple-300' /> <Tailwind class="block inline-block text-blue-200" /> </span>
     </div>
 </footer>
 
